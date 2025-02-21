@@ -1,44 +1,24 @@
-Zaida Zane Website
-
-This is the source code for Zaida Zane’s interactive Three.js-powered website. It leverages React, Vite, and Three.js to create an immersive visual experience.
-
-🛠️ Pre-requisites for Local Development
-
-1. Install Node.js (LTS)
-
-Ensure you have Node.js (LTS version) installed.👅 Download it here
-
-Check if it's installed:
-
-node -v
+<h2>Pre-requisites for Local Development</h2>
+<h3>1. Install Node.js (LTS)</h3>
+<p>Ensure you have Node.js (LTS version) installed. <a href="https://nodejs.org/">Download it here</a></p>
+<pre><code>node -v
 npm -v
+<h3>2. Install Git</h3>
+<p>You need Git for version control. <a href="https://git-scm.com/downloads">Download Git</a></p>
+<pre><code>git --version</code></pre>
 
-2. Install Git
-
-You need Git for version control.👅 Download Git
-
-Check if it's installed:
-
-git --version
-
-3. Clone the Repository
-
-git clone https://github.com/firefya/zaida-zane-site.git
+<h3>3. Clone the Repository</h3>
+<pre><code>git clone https://github.com/firefya/zaida-zane-site.git
 cd zaida-zane-site
+<h3>4. Install Dependencies</h3>
+<pre><code>npm install</code></pre>
 
-4. Install Dependencies
+<h3>5. Start the Development Server</h3>
+<pre><code>npm run dev</code></pre>
+<p>Now visit <a href="http://localhost:5173/">http://localhost:5173/</a> in your browser.</p>
 
-npm install
-
-5. Start the Development Server
-
-npm run dev
-
-Now visit http://localhost:5173/ in your browser.
-
-📂 Core Repository Architecture
-
-The project is structured to ensure separation of concerns while optimizing for performance and maintainability.
+<h2>Core Repository Architecture</h2>
+<pre><code>
 
 zz-planet/
 │── node_modules/       # Dependencies installed by npm
@@ -56,103 +36,60 @@ zz-planet/
 │── vite.config.js      # Configuration for Vite (asset handling, server)
 │── README.md           # Documentation (this file)
 
-Why This Structure?
+<h3>Why This Structure?</h3>
+<ul>
+    <li><code>public/</code> → Stores static files like images.</li>
+    <li><code>src/</code> → Contains all React components and logic.</li>
+    <li><code>components/</code> → Encapsulates modular UI logic (like <code>Scene.jsx</code>).</li>
+    <li><code>vite.config.js</code> → Ensures Vite serves assets correctly.</li>
+    <li><code>.gitignore</code> → Prevents unnecessary files from being committed.</li>
+</ul>
 
-✅ public/ → Stores static files like images.
+<h2>Branching Etiquette</h2>
+<h3>Main Branches</h3>
+<table border="1">
+    <tr><th>Branch</th><th>Purpose</th></tr>
+    <tr><td><code>main</code></td><td>The stable, production-ready branch. Always functional.</td></tr>
+    <tr><td><code>dev</code></td><td>Active development branch. New features are merged here before <code>main</code>.</td></tr>
+</table>
 
-✅ src/ → Contains all React components and logic.
-
-✅ components/ → Encapsulates modular UI logic (like Scene.jsx).
-
-✅ vite.config.js → Ensures Vite serves assets correctly.
-
-✅ .gitignore → Prevents unnecessary files from being committed.
-
-🚀 Branching Etiquette
-
-To maintain a clean and organized Git workflow, follow these branching conventions:
-
-Main Branches
-
-Branch
-
-Purpose
-
-main
-
-The stable, production-ready branch. Always functional.
-
-dev
-
-Active development branch. New features are merged here before main.
-
-Feature & Fix Branches
-
-Create feature branches for new work:
+<h3>Feature & Fix Branches</h3>
+<pre><code>
 
 git checkout -b feature/new-menu
 git commit -m "Added new menu layout"
 git push origin feature/new-menu
-
 After development, create a Pull Request (PR) and request a review before merging.
 
-Bug Fixes
-
-For urgent bug fixes, create a branch off main:
+<h3>Bug Fixes</h3>
+<pre><code>
 
 git checkout -b fix/navbar-bug
-
 After testing, merge it into dev first, then into main once verified.
 
-Branch Naming Conventions
+<h2>Contributing</h2>
+<ul>
+    <li>Always pull the latest changes before starting:
+    <pre><code>git pull origin main</code></pre></li>
+    <li>Use descriptive commit messages:
+    <pre><code>git commit -m "Fixed menu animation delay"</code></pre></li>
+    <li>Open Pull Requests (PRs) before merging to avoid breaking the codebase.</li>
+</ul>
 
-Type
-
-Naming Format
-
-Features
-
-feature/<name>
-
-Fixes
-
-fix/<name>
-
-Hotfixes
-
-hotfix/<name>
-
-🔋 Contributing
-
-Always pull the latest changes before starting:
-
-git pull origin main
-
-Use descriptive commit messages:
-
-git commit -m "Fixed menu animation delay"
-
-Open Pull Requests (PRs) before merging to avoid breaking the codebase.
-
-⚡ Deployment
-
-Deployment is handled via GitHub Pages (or another hosting service). Ensure vite.config.js is set correctly:
-
-export default defineConfig({
-  base: "./", // Ensures assets resolve properly in production
+<h2>Deployment</h2>
+<p>Deployment is handled via GitHub Pages (or another hosting service). Ensure <code>vite.config.js</code> is set correctly:</p>
+<pre><code>export default defineConfig({
+base: "./", // Ensures assets resolve properly in production
 });
 
-🎯 Future Enhancements
+<h2>Future Enhancements</h2>
+<ul>
+    <li>Add unit tests for UI components.</li>
+    <li>Optimize Three.js performance for better loading times.</li>
+    <li>Implement SEO improvements for better search visibility.</li>
+</ul>
 
-Add unit tests for UI components.
+<h2>Need Help?</h2>
+<p>If you encounter issues, open a <a href="https://github.com/firefya/zaida-zane-site/issues">GitHub Issue</a> or reach out to the maintainer.</p>
 
-Optimize Three.js performance for better loading times.
-
-Implement SEO improvements for better search visibility.
-
-📞 Need Help?
-
-If you encounter issues, open a GitHub Issue or reach out to the maintainer.
-
-🔥 Happy coding! 🚀
-
+<p>Happy coding!</p>
