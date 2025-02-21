@@ -25,11 +25,8 @@ npm run dev
 Now, open your browser and visit: http://localhost:5173/
 
 Project Structure
-The project directory is structured as follows:
 
-pgsql
-Copy
-Edit
+The project directory is structured as follows:
 zz-planet/  
 │── node_modules/  
 │── public/  
@@ -45,7 +42,9 @@ zz-planet/
 │── package.json  
 │── vite.config.js  
 │── README.md  
+
 Key Files & Folders
+
 public/ – Contains static assets like images and index.html.
 src/ – Holds the source code and components.
 components/ – Contains reusable UI components.
@@ -53,6 +52,7 @@ vite.config.js – Configuration file for Vite.
 .gitignore – Lists files to be ignored by Git.
 
 Working with Git
+
 The project uses two main branches:
 
 Branch	Purpose
