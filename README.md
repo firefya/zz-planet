@@ -1,2 +1,0 @@
-# zzolanet
-zaida-zane-site
